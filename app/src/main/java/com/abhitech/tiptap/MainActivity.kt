@@ -3,6 +3,7 @@ package com.abhitech.tiptap
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -48,7 +50,7 @@ fun MyApp(content: @Composable () -> Unit) {
 
 // <=========
 
-@Preview
+//@Preview
 @Composable
 fun TopHeader(totalPerPerson: Double = 200.0) {
     Surface(
@@ -81,6 +83,21 @@ fun TopHeader(totalPerPerson: Double = 200.0) {
     }
 }
 
+@Preview(showBackground = false)
+@Composable
+fun MainContent() {
+    Surface(
+        modifier = Modifier
+            .padding(2.dp)
+            .fillMaxWidth()
+            .height(100.dp),
+        shape = RoundedCornerShape(corner = CornerSize(8.dp)),
+        color = Color.White,
+        border = BorderStroke(width = 2.dp, color = Color.Red)
+    ) {
+
+    }
+}
 
 //@Preview(showBackground = true)
 @Composable
