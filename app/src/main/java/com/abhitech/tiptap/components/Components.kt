@@ -51,3 +51,11 @@ fun InputField(
         )
     )
 }
+
+private fun showToast(context: Context, message: String) {
+    Toast.makeText(
+        context.applicationContext,
+        message,
+        Toast.LENGTH_SHORT
+    ).show()
+}
