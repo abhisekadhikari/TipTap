@@ -1,2 +1,2 @@
 # Hello World 🌍
-## This is a Tip Calculator App developed using Android JetPack Compose.
+## A Tip Calculator App developed using Android JetPack Compose.
