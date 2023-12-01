@@ -1,10 +1,11 @@
 package com.abhitech.tiptap.components
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AttachMoney
 import androidx.compose.material.icons.rounded.CurrencyRupee
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -37,7 +38,12 @@ fun InputField(
         onValueChange = { valueState.value = it },
         modifier = modifier.padding(bottom = 10.dp, start = 10.dp, end = 10.dp),
         label = { Text(text = labelId) },
-        leadingIcon = { Icon(imageVector = Icons.Rounded.CurrencyRupee, contentDescription = null) },
+        leadingIcon = {
+            Icon(
+                imageVector = Icons.Rounded.CurrencyRupee,
+                contentDescription = null
+            )
+        },
         singleLine = isSingleLine,
         enabled = enabled,
         keyboardOptions = KeyboardOptions(
